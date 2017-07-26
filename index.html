@@ -28,7 +28,7 @@
 <img src="cowdedo.png" style="display: inline-block; width: 20%; height: 20%; position: absolute; float: left" class="dedo">
 <img src="super-moon.png" style="width: 25%; margin-top: 10%; display: inline-block" class="moon">
     <div class="aligner" style="align-self: flex-end"></div>
-<audio src="http://box-six.com/files/marching-band/box6_Into_the_Cosmos_mvt1_ensemble.mp3" autoplay></audio>
+<audio src="./box6_Into_the_Cosmos_mvt1_ensemble.mp3" autoplay></audio>
 </body>
 <style>
     html{
@@ -46,6 +46,10 @@
         $(".dedo").css("width", (window.innerWidth - $(".moon").width())/4 + "px");
         $(".dedo").css("height", $(".dedo").width()/2);
         $(".dedo").css("margin-top", (window.innerHeight - $(".moon").height())/2 + "px");
+        setInterval(function () {
+            $(".dedo").css("margin-left", parseInt($(".dedo").css("margin-left").replace("px", ""))+1 + "px");
+            $(".dedo").css("margin-top", parseInt($(".dedo").css("margin-top").replace("px", ""))-0.2 + "px");
+        }, 10)
     });
 </script>
 </html>
