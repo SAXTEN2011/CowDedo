@@ -23,11 +23,9 @@
     <script src="./js/materialize.js"></script>
 
 </head>
-<body style="text-align: center; display: flex">
+<body style="justify-content: center; display: flex">
     <div class="aligner" style="align-self: flex-start"></div>
-<img src="cowdedo.png" style="display: inline-block; width: 20%; height: 20%; position: absolute; float: left" class="dedo">
-<img src="super-moon.png" style="width: 25%; margin-top: 10%; display: inline-block" class="moon">
-    <div class="aligner" style="align-self: flex-end"></div>
+<img src="MoonCowUseThisOne.gif" class="cowMoon">
 <audio src="./box6_Into_the_Cosmos_mvt1_ensemble.mp3" autoplay></audio>
 </body>
 <style>
@@ -36,20 +34,16 @@
         -moz-background-image: url('dark-space-texture.jpg');
         -webkit-background-image: url('dark-space-texture.jpg');
         background: url('dark-space-texture.jpg');
+        text-align: center;
+    }
+    .cowMoon{
+        height: 35%;
+        margin-top: 5%;
     }
 </style>
 <script>
-    $(document).ready(function () {
-        $(".moon").css("height", $(".moon").width());
-        $(".moon").css("margin-left", (window.innerWidth - $(".moon").width())/2 + "px");
-        $(".moon").css("margin-top", (window.innerHeight - $(".moon").height())/2 + "px");
-        $(".dedo").css("width", (window.innerWidth - $(".moon").width())/4 + "px");
-        $(".dedo").css("height", $(".dedo").width()/2);
-        $(".dedo").css("margin-top", (window.innerHeight - $(".moon").height())/2 + "px");
-        setInterval(function () {
-            $(".dedo").css("margin-left", parseInt($(".dedo").css("margin-left").replace("px", ""))+1 + "px");
-            $(".dedo").css("margin-top", parseInt($(".dedo").css("margin-top").replace("px", ""))-0.2 + "px");
-        }, 10)
-    });
+$(document).ready(function () {
+$(".cowMoon").css('width', $('.cowMoon').height());
+});
 </script>
 </html>
